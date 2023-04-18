@@ -2,5 +2,6 @@
 
 ## Team Members
 
-Julie Deng
-Tyler Chen
+Lab Partner: Julie Deng
+
+Lab Partner: Tyler Chen
