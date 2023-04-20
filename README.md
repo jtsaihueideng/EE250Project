@@ -7,4 +7,4 @@ Lab Partner: Julie Deng
 Lab Partner: Tyler Chen
 
 ## Description
-User's messages are converted into an .mp3 file and sent over MQTT protocol. Client subscribers can receive the audio file and decode the message with the correct letters to dual tone mapping. Implementation of symmetric encryption. The another subscriber acts as a database to store these mp3 files. 
+Implementation of symmetric encryption. User's messages are converted into an .mp3 file and sent over MQTT protocol. Client subscribers can receive the audio file and decode the message with the correct letters to dual tone mapping. The another subscriber acts as a database to store these mp3 files. 
