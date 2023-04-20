@@ -24,3 +24,6 @@ audio = AudioSegment.from_wav('output.wav')
 
 # Convert the AudioSegment object to an mp3 file
 audio.export('output.mp3', format='mp3')
+
+# Source: 
+# ChatGPT 3.5 Arch
