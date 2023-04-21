@@ -4,12 +4,12 @@ from pydub import AudioSegment
 
 # Define the sample rate and duration of the audio clip
 sample_rate = 44100
-duration = 1  # seconds
+duration = 0.1  # seconds
 ch = 'a'
 
 # Define the frequencies to be played
 freq1 = 100  # A4 note
-freq2 = 53  # A5 note
+freq2 = 1653  # A5 note
 for x in range(13):
 	# Generate the audio data from the frequencies
 	t = np.linspace(0, duration, int(duration * sample_rate), False)
@@ -30,7 +30,7 @@ for x in range(13):
 	freq1 += 100
 
 freq1 = 100  # A4 note
-freq2 = 87  # A5 note
+freq2 = 1987  # A5 note
 for x in range(13):
 	# Generate the audio data from the frequencies
 	t = np.linspace(0, duration, int(duration * sample_rate), False)

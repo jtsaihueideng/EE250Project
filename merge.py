@@ -1,10 +1,10 @@
 from pydub import AudioSegment
  # enter the path of your audio file
-soundH = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/h.mp3")
-soundE = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/e.mp3")
-soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/l.mp3")
-soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/l.mp3")
-soundO = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/o.mp3")
+soundH = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/other/h.mp3")
+soundE = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/other/e.mp3")
+soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/other/l.mp3")
+soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/other/l.mp3")
+soundO = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/other/o.mp3")
 
 def choose_option():
     print("Audio file editing by pydub Package\n")
@@ -15,7 +15,7 @@ def choose_option():
 def merge_two_songs():
     print("Sound Overlay")
     soundHELLO = soundH.append(soundE).append(soundL).append(soundL).append(soundO)
-    soundHELLO.export("/home/tytionex/Documents/EE250Project/audio/1sec/hello.mp3",format="mp3")
+    soundHELLO.export("/home/tytionex/Documents/EE250Project/audio/1sec/hello1.mp3",format="mp3")
     
 choose_option()
 '''  
