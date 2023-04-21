@@ -1,8 +1,24 @@
 from pydub import AudioSegment
  # enter the path of your audio file
-sound1 = AudioSegment.from_mp3("/home/tytionex/Documents/project/audio/sample1.mp3")
-sound2 = AudioSegment.from_mp3("/home/tytionex/Documents/project/audio/sample2.mp3")
+soundH = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/h.mp3")
+soundE = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/e.mp3")
+soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/l.mp3")
+soundL = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/l.mp3")
+soundO = AudioSegment.from_mp3("/home/tytionex/Documents/EE250Project/audio/1sec/o.mp3")
+
+def choose_option():
+    print("Audio file editing by pydub Package\n")
+    print("3. Merge Two Songs") ;
+    merge_two_songs()
   
+# merge two audio
+def merge_two_songs():
+    print("Sound Overlay")
+    soundHELLO = soundH.append(soundE).append(soundL).append(soundL).append(soundO)
+    soundHELLO.export("/home/tytionex/Documents/EE250Project/audio/1sec/hello.mp3",format="mp3")
+    
+choose_option()
+'''  
 def choose_option():
     print("Audio file editing by pydub Package\n")
     print("1. Audio Cut ") ;
@@ -47,6 +63,7 @@ def sound_Increase():
 def merge_two_songs():
     print("Sound Overlay")
     sound3 = sound1.append(sound2)
-    sound3.export("/home/tytionex/Documents/project/audio/sample_merge_audio",format="mp3")
+    sound3.export("/home/tytionex/Documents/project/audio/sample_merge_audio.mp3",format="mp3")
     
 choose_option()
+'''
