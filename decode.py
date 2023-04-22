@@ -6,10 +6,11 @@ import os
 import sys
 
 MAX_FRQ = 2000
-SLICE_SIZE = 0.15 #seconds
-WINDOW_SIZE = 0.25 #seconds
+SLICE_SIZE = 0.75 #seconds
+WINDOW_SIZE = 1 #seconds
 
 # TODO: implement this dictionary
+'''
 NUMBER_DIC = {
     (100, 1653): "a",
     (200, 1653): "b",
@@ -38,7 +39,36 @@ NUMBER_DIC = {
     (1200,1987): "y",
     (1300,1987): "z"}
 LOWER_FRQS = [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300]
-HIGHER_FRQS = [53,87]
+'''
+NUMBER_DIC = {
+    (100, 1653): "a",
+    (150, 1653): "b",
+    (200, 1653): "c",
+    (250, 1653): "d",
+    (300, 1653): "e",
+    (350, 1653): "f",
+    (400, 1653): "g",
+    (450, 1653): "h",
+    (500, 1653): "i",
+    (550, 1653): "j",
+    (600, 1653): "k",
+    (650, 1653): "l",
+    (700, 1653): "m",
+    (100, 1987): "n",
+    (150, 1987): "o",
+    (200, 1987): "p",
+    (250, 1987): "q",
+    (300, 1987): "r",
+    (350, 1987): "s",
+    (400, 1987): "t",
+    (450, 1987): "u",
+    (500, 1987): "v",
+    (550, 1987): "w",
+    (600, 1987): "x",
+    (650, 1987): "y",
+    (700, 1987): "z"}
+LOWER_FRQS = [100,150,200,250,300,350,400,450,500,550,600,650,700]
+HIGHER_FRQS = [1653,1987]
 FRQ_THRES = 20
 
 def get_max_frq(frq: Iterable[float], fft: Iterable[float]) -> float:
@@ -88,6 +118,7 @@ def get_peak_frqs(frq, fft):
     low_frq_fft = fft[:split_idx]
     high_frq = frq[split_idx:]
     high_frq_fft = fft[split_idx:]
+
     return (get_max_frq(low_frq, low_frq_fft), get_max_frq(high_frq, high_frq_fft))
 
 def get_number_from_frq(lower_frq: float, higher_frq: float) -> str:

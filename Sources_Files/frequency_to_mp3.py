@@ -12,8 +12,8 @@ sample_rate = 44100
 duration = 5  # seconds
 
 # Define the frequencies to be played
-freq1 = 440  # A4 note
-freq2 = 880  # A5 note
+freq1 = 1  # A4 note
+freq2 = 2  # A5 note
 
 # Generate the audio data from the frequencies
 t = np.linspace(0, duration, int(duration * sample_rate), False)
