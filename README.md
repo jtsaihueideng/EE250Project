@@ -7,4 +7,19 @@ Lab Partner: Julie Deng
 Lab Partner: Tyler Chen
 
 ## Description
-Implementation of substitution cipher. User's messages are converted into an .mp3 file by using a freqency to letter mapping table and sent over MQTT protocol. Client subscribers can receive the audio file and decode the message with signal processing. Another subscriber acts as a database to store these mp3 files. 
+Implementation of substitution cipher. User's messages are converted into an .mp3 file by using a freqency to letter mapping table and sent over MQTT protocol. Client subscribers can receive the audio file and decode the message with signal processing. Another subscriber acts as a database to store these mp3 files.
+
+## External Libraries
+- AudioSegment from pydub
+- os
+- Iterable from typing
+- matplotlib
+- NumPy
+- PyDub
+- Sys
+- Argparse
+- Pathlib
+- Paho.mqtt.client
+- Time
+- Datetime
+- Socket
