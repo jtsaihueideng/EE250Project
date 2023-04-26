@@ -17,7 +17,7 @@ Implementation of substitution cipher. User's messages are converted into an .mp
 python3 main.py
 ```
 
-2. If the user chooses to send data, the console will prompt the user to enter a string. After the user finishes entering the input, the console will produce a mp3 file called 'message.mp3', which will be published using the MQTT protocol. If the user chooses to read data, the program will subscribe using MQTT to get 'message.mp3', and then the console will print the decoded output. 
+2. If the user chooses to send data, the console will prompt the user to enter a string. After the user finishes entering the input, the console will produce a mp3 file called 'message.mp3', which will be published using the MQTT protocol. If the user chooses to read data, the program will subscribe using MQTT to get 'receive.mp3', and then the console will print the decoded output. 
 
 ## External Libraries
 - AudioSegment from pydub
