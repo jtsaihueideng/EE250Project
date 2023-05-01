@@ -75,13 +75,14 @@ def main():
     '''
         Send audio file 
     '''
+    time.sleep(2);
     client = connect_mqtt()
     print("loop_start")
     client.loop_start()
     print("client")
     publish(client)
-    time.sleep(5)
     client.loop_stop()
+    #client.loop_forever()
 
 
 

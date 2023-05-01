@@ -5,6 +5,7 @@ from pydub import AudioSegment
 from paho.mqtt import client as mqtt_client
 import os
 import sys
+import time
 
 MAX_FRQ = 2000
 SLICE_SIZE = 0.75 #seconds
@@ -98,6 +99,11 @@ def subscribe(client: mqtt_client):
         f.write(msg.payload)
         f.close()
         print ('Audio received')
+        client.disconnect()
+        client.loop_stop()
+
+    client.subscribe(topic_sub)
+    client.on_message = on_message
 '''
 '''
 
@@ -170,14 +176,21 @@ def get_number_from_frq(lower_frq: float, higher_frq: float) -> str:
 
     return NUMBER_DIC[(LOWER_FRQS[idx_lo], HIGHER_FRQS[idx_hi])]
 
-def main(file):
+def main():
 
     client = connect_mqtt()
     subscribe(client)
     client.loop_forever()
-    time.sleep(20)
-    client.disconnect()
-
+    #time.sleep(20)
+    '''
+    for i in range(5):
+        client.loop()
+        time.sleep(1)
+        print("hi")
+    '''
+    #client.disconnect()
+    print("hi")
+    file = "receive.mp3"
     print("Importing {}".format(file))
     audio = AudioSegment.from_mp3(file)
 
@@ -242,7 +255,10 @@ def main(file):
     print("Secret input: " + str(output))
 
 if __name__ == '__main__':
+    main()
+    '''
     if len(sys.argv) != 2 or not os.path.isfile(sys.argv[1]):
         print("Usage: decode.py [file]")
         exit(1)
     main(sys.argv[1])
+    '''
