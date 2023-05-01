@@ -2,6 +2,10 @@ import numpy as np
 from scipy.io import wavfile
 from pydub import AudioSegment
 
+'''
+Create the different .mp3 for different letters files
+'''
+
 # Define the sample rate and duration of the audio clip
 sample_rate = 44100
 duration = 0.1  # seconds
